@@ -1,0 +1,4 @@
+
+public enum GraphWeightType {
+	WEIGHTED_POSITIVE, WEIGHTED_NEGATIVE, UNWEIGHTED
+}

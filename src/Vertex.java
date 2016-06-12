@@ -22,17 +22,29 @@ public class Vertex {
 	
 	String getVertexName(){
 		return this.name;
-		}
+	}
 	
 	ArrayList<Vertex> getVertexNeighbors(){
 		return this.neighbors;
-		}
+	}
 	
-	void addNeighbor(Vertex n){
-		this.neighbors.add(n);
+	void addNeighbor(Vertex n, VEGraph g){
+		if(this.neighbors.size()<g.no_of_vertices)
+			this.neighbors.add(n);
+		else
+			System.out.println("Number of neighbors cannot exceed total number of vertices");
 	}
 
-	void addNeighbors(Collection<Vertex> n){
-		this.neighbors.addAll(n);
+	void addNeighbors(Collection<Vertex> n, VEGraph g){
+		if(n.size()<g.no_of_vertices)
+			this.neighbors.addAll(n);
+		else
+			System.out.println("Number of neighbors cannot exceed total number of vertices");
 	}
+	
+	void displayVertexNeighbors(){
+		for(Vertex b:this.neighbors)
+			System.out.println(b.getVertexName());
+	}
+	
 }

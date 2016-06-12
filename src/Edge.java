@@ -5,13 +5,24 @@
 public class Edge {
 	
 	Vertex from,to;
+	int weight;
 	
-	Edge(Vertex from, Vertex to){
+	Edge(Vertex from, Vertex to,int weight){
 		this.from = from;
 		this.to=to;
+		this.weight=weight;
 	}
 	
-	String getFromVertex(){return this.from.name;}
+	String getFromVertex(){
+		return this.from.name;
+	}
 	
-	String getToVertex(){return this.to.name;}
+	String getToVertex(){
+		return this.to.name;
+	}
+	
+	int getWeight(){
+		return this.weight;
+	}
+	
 }
